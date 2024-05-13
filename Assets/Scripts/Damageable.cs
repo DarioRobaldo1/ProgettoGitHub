@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
-    [SerializeField] private readonly int MaxHealth = 1;
+    [SerializeField] private int MaxHealth = 1;
     private int CurrentHealth;
     private List<IDamageListener> damageListeners = new();
     private bool hasDamageListener;

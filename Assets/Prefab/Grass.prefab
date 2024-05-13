@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 416804977067474103}
   - component: {fileID: 416804977067474102}
   - component: {fileID: 416804977067474097}
-  - component: {fileID: 416804977067474096}
   m_Layer: 0
   m_Name: Grass_PNG
   m_TagString: Untagged
@@ -26,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416804977067474099}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.6532807, y: -0.27059796, z: 0.27059716, w: 0.6532827}
   m_LocalPosition: {x: 0, y: 0.623, z: 0}
   m_LocalScale: {x: 0.15059894, y: 0.09934622, z: 0.1258518}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 416804977954189754}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
 --- !u!33 &416804977067474102
 MeshFilter:
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &416804977067474096
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416804977067474099}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &416804977954189733
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +92,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 416804977954189754}
+  - component: {fileID: 5026756430234709862}
+  - component: {fileID: 1919061905888604148}
+  - component: {fileID: 1459259362317343921}
   m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
@@ -121,6 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416804977954189733}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.493, y: 0, z: -0.498}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -129,8 +118,68 @@ Transform:
   - {fileID: 416804977067474103}
   - {fileID: 7005519419759324874}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &5026756430234709862
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416804977954189733}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1919061905888604148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416804977954189733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.1076953, z: 1}
+  m_Center: {x: 0, y: 0.58600664, z: 0}
+--- !u!114 &1459259362317343921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416804977954189733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5f72318de04114498d4cfe8cc68d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 1
 --- !u!1 &7022645685111400197
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +191,6 @@ GameObject:
   - component: {fileID: 7005519419759324874}
   - component: {fileID: 7745413802942457908}
   - component: {fileID: 4576157932074025696}
-  - component: {fileID: 5459194728736370346}
   m_Layer: 0
   m_Name: Grass_PNG (1)
   m_TagString: Untagged
@@ -157,13 +205,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022645685111400197}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.6532807, y: 0.27059805, z: -0.27059716, w: 0.6532827}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
   m_LocalScale: {x: 0.15059894, y: 0.09934622, z: 0.1258518}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 416804977954189754}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -45}
 --- !u!33 &7745413802942457908
 MeshFilter:
@@ -215,17 +263,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5459194728736370346
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7022645685111400197}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
