@@ -24,7 +24,7 @@ public class Damageable : MonoBehaviour
         {
             // Notify listener that they will die in this moment
             damageListeners.ForEach((IDamageListener dl) => dl.OnDeath(attacker));
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }
