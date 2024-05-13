@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class MainMenu : MonoBehaviour
+public class StartButton : MonoBehaviour
 {
 
     public Button startButton;
@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
         startButton.onClick.AddListener(OnClick);
     }
 
-    void OnClick()
+    public void OnClick()
     {
         SceneManager.LoadScene("Livello1");
         
