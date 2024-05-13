@@ -10,7 +10,7 @@ public class CollisionAttacker : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Damageable d))
         {
-            d.TakeDamage(1, gameObject);
+            d.TakeDamage(AttackPower, gameObject);
         }
     }
 }
