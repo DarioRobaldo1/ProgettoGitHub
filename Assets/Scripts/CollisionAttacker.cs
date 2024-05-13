@@ -13,4 +13,11 @@ public class CollisionAttacker : MonoBehaviour
             d.TakeDamage(AttackPower, gameObject);
         }
     }
+    private void OnTriggerEnter(UnityEngine.Collider collision)
+    {
+        if (collision.gameObject.TryGetComponent(out Damageable d))
+        {
+            d.TakeDamage(AttackPower, gameObject);
+        }
+    }
 }
