@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5f72318de04114498d4cfe8cc68d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 1
+  MaxHealth: 2
 --- !u!114 &3294654089622635794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a40138d8db70a444937a7fab0e88a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BouncePower: 20
+  BouncePower: 10
 --- !u!54 &6864747104290236803
 Rigidbody:
   m_ObjectHideFlags: 0
