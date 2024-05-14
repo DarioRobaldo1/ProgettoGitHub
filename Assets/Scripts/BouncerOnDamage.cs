@@ -7,13 +7,6 @@ using UnityEngine;
 public class BouncerOnDamage : MonoBehaviour, IDamageListener
 {
     [SerializeField] private float BouncePower = 20.0f;
-    public void OnDeath(GameObject killer)
-    {
-        if (killer.TryGetComponent(out Rigidbody rb))
-        {
-            rb.AddForce(-killer.transform.forward * BouncePower, ForceMode.Impulse);
-        }
-    }
 
     public void OnHurt(int damageTaken, int health, int MaxHealth, GameObject attacker)
     {
