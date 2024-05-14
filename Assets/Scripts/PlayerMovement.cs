@@ -11,9 +11,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float MovementSpeed = 50.0f;
     [SerializeField] private float RotationSpeed = 50.0f;
     private Rigidbody rb;
+    private RoundManager rm;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rm = FindObjectOfType<RoundManager>();
     }
 
     public void OnMovementInputChange(InputAction.CallbackContext cc)
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!rm.HasGameStarted) { return; }
         // Calculate and apply movement and rotation
         Vector3 forwardMovement = directionInputs.y * MovementSpeed * transform.forward * MovementBoost;
         rb.AddForce(forwardMovement, ForceMode.Force);
