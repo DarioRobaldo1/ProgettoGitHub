@@ -7,6 +7,9 @@ using UnityEngine;
 public class BouncerOnDamage : MonoBehaviour, IDamageListener
 {
     [SerializeField] private float BouncePower = 20.0f;
+    public void OnDeath(GameObject killer)
+    {
+    }
 
     public void OnHurt(int damageTaken, int health, int MaxHealth, GameObject attacker)
     {
