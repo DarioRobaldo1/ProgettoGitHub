@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class CollisionAttacker : MonoBehaviour
+public class RigidbodyTriggeredAttacker : MonoBehaviour
 {
     [SerializeField] private int AttackPower = 1;
     private void OnCollisionEnter(Collision collision)

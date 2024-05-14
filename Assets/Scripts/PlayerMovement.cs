@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody), typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]/*serialized for debugging purposes, remove serialization later*/
     private Vector2 directionInputs;
     [SerializeField] private float MovementBoost = 1.0f;
     [SerializeField] private float MovementSpeed = 50.0f;
