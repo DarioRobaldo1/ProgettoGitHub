@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SceneCondivise/Livello1.unity
     guid: 76734c2c3e50bf24886a1fee60368b61
+  - enabled: 0
+    path: Assets/GregorioRossi/AAAA.unity
+    guid: 300f11c535904f34185b1fca940830b6
   m_configObjects: {}

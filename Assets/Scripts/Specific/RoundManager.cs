@@ -18,6 +18,7 @@ public class RoundManager : MonoBehaviour
     private int remainingWeeds = 0;
     private void Start()
     {
+        CountdownText.text = $"{StartingCountdown}";
         CountdownText.enabled = true;
         TimerText.enabled = false;
     }
@@ -54,6 +55,7 @@ public class RoundManager : MonoBehaviour
         --remainingWeeds;
         if (remainingWeeds <= 0)
         {
+            Debug.Log("WIN");
             SceneManager.LoadScene(NextScene);
         }
     }

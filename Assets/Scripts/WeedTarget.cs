@@ -5,21 +5,15 @@ using UnityEngine;
 
 public class WeedTarget : MonoBehaviour
 {
-    private RoundManager[] rms;
+    private RoundManager rm;
     private void OnEnable()
     {
-        rms = FindObjectsOfType<RoundManager>();
-        foreach (RoundManager rm in rms)
-        {
-            rm.OnWeedSpawned();
-        }
+        rm = FindObjectOfType<RoundManager>();
+        rm.OnWeedSpawned();
     }
+
     private void OnDisable()
     {
-        foreach (RoundManager rm in rms)
-        {
-            rm.OnWeedDestroyed();
-        }
-
+        rm.OnWeedDestroyed();
     }
 }
