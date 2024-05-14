@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SceneCondivise/Main Menu.unity
+    path: Assets/SceneCondivise/MainMenu.unity
     guid: 4c4ce1237c4b7594fbdd027aa7992610
   - enabled: 1
     path: Assets/SceneCondivise/Livello1.unity
