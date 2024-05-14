@@ -9,9 +9,9 @@ public class BouncerOnDamage : MonoBehaviour, IDamageListener
     [SerializeField] private float BouncePower = 20.0f;
     public void OnDeath(GameObject killer)
     {
-        if (attacker.TryGetComponent(out Rigidbody rb))
+        if (killer.TryGetComponent(out Rigidbody rb))
         {
-            rb.AddForce(-attacker.transform.forward * BouncePower, ForceMode.Impulse);
+            rb.AddForce(-killer.transform.forward * BouncePower, ForceMode.Impulse);
         }
     }
 
