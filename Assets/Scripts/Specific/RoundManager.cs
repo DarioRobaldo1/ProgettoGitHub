@@ -15,7 +15,28 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI TimerText;
     [SerializeField] private TextMeshProUGUI CountdownText;
     [SerializeField] private float timer1s = 1.0f;
+    private bool isChangingScene = false;
     private int remainingWeeds = 0;
+    private static int idCounter = 0;
+    private int realid;
+    private bool idSet = false;
+    public int currentId
+    {
+        get
+        {
+            if (!idSet)
+            {
+                idSet = true;
+                realid = idCounter++;
+            }
+            return realid;
+        }
+    }
+    private void OnDestroy()
+    {
+        isChangingScene = true;
+        Debug.Log($"DESTRUCTION OF {currentId}");
+    }
     private void Start()
     {
         CountdownText.text = $"{StartingCountdown}";
@@ -45,6 +66,7 @@ public class RoundManager : MonoBehaviour
                 TimerText.text = string.Format("{0:00}:{1:00}", RemainingTime / 60, RemainingTime % 60);
                 if (RemainingTime <= 0)
                 {
+                    isChangingScene = true;
                     SceneManager.LoadScene(GameOverScene);
                 }
             }
@@ -52,15 +74,16 @@ public class RoundManager : MonoBehaviour
     }
     public void OnWeedDestroyed()
     {
+        if (isChangingScene) { return; }
         --remainingWeeds;
         if (remainingWeeds <= 0)
         {
-            Debug.Log("WIN");
             SceneManager.LoadScene(NextScene);
         }
     }
     public void OnWeedSpawned()
     {
+        if (isChangingScene) { return; }
         ++remainingWeeds;
     }
 }
